@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    height: 100%;
+    width: 100%;box-sizing: border-box;
+}
+
+body{
+    background-color: #000;
+}
+
+#webgl{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+}
