@@ -1,21 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
     <link href="./output.css" rel="stylesheet">
   </head>
   <body>
 
-    <!-- <div class="main w-full"> -->
-      <div class="w-full overflow-hidden absolute z-10">
-        <img class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 mix-blend-lighten" src="https://cdn.wallpaper.tn/large/Cyberpunk-2077-Logo-Wallpaper-58602.jpg" alt="">
-        <!-- <img class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10" src="./cyberpunk.png" alt=""> -->
-      </div>
-      <canvas id="webgl"></canvas>
-    <!-- </div> -->
+    <div class="w-full overflow-hidden relative z-10">
+      <!-- Navbar -->
+      <nav class="cursor-pointer h-[7vh] w-full p-4 absolute top-0 left-0 z-30">
+        <div class="container mx-auto flex justify-between items-center">
+          <div class="logo">
+            <img class="w-16 h-auto" src="https://i.redd.it/3d-rendered-the-cyberpunk-logo-using-blender-v0-khopj82wqee91.png?width=1920&format=png&auto=webp&s=f42dbd8f5c04aedb9ba9291c1ba4d679029cc1f3" alt="Cyberpunk Logo">
+          </div>
+          <ul class="flex space-x-6 text-[#00ffff]">
+            <li><a href="#" class="hover:text-[#ff00ff] transition duration-300">Night City</a></li>
+            <li><a href="#" class="hover:text-[#ff00ff] transition duration-300">Characters</a></li>
+            <li><a href="#" class="hover:text-[#ff00ff] transition duration-300">Weapons</a></li>
+            <li><a href="#" class="hover:text-[#ff00ff] transition duration-300">Vehicles</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Background Image with blending effect -->
+      <img class="filter saturate-150 contrast-125 absolute top-0 left-0 w-full h-full object-cover mix-blend-lighten z-10" 
+           src="https://i.redd.it/3d-rendered-the-cyberpunk-logo-using-blender-v0-khopj82wqee91.png?width=1920&format=png&auto=webp&s=f42dbd8f5c04aedb9ba9291c1ba4d679029cc1f3" alt="Cyberpunk Background">
+
+      <!-- WebGL Canvas -->
+      <canvas id="webgl" class="absolute top-0 left-0 w-full h-full z-10"></canvas>
+    </div>
 
     <script type="module" src="/main.js"></script>
   </body>
